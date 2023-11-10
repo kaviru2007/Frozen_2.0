@@ -1,0 +1,61 @@
+services:
+
+  - type: web
+
+    plan: free
+
+    name: BIXBY-BOT
+
+    env: python
+
+    buildCommand: pip install -r requirements.txt
+
+    startCommand: python bot.py
+
+    repo: https://github.com/DX-MODS/BIXBY-BOT.git      
+
+    branch: main
+
+    envVars:
+    
+      - key: WEBHOOK
+      
+        sync:false
+ 
+      - key: BOT_TOKEN 
+
+        sync: false
+
+      - key: API_ID 
+
+        sync: false
+
+      - key: API_HASH 
+
+        sync: false
+
+      - key: BIN_CHANNEL
+
+        sync: false
+
+      - key: UPDATES_CHANNEL
+
+        sync: false
+
+      - key: OWNER_USERNAME
+
+        sync: false
+
+      - key: OWNER_ID
+
+        sync: false
+
+      - key: DATABASE_URL
+
+        sync: false
+
+      - key: FQDN
+
+        sync: false
+
+    autoDeploy: false
